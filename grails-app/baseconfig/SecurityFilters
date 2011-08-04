@@ -1,0 +1,32 @@
+
+import ar.com.goliath.Auditoria
+class SecurityFilters {
+
+    def authenticateService
+
+    def filters = {
+        all(controller:'*', action:'*') {
+           /** after = { model ->
+                def principal = authenticateService.principal()
+                if (principal != null && principal != 'anonymousUser') {
+                     model?.loggedInUser = principal?.domainClass
+                     if(!session?.logLogIn){
+                        def auditoria= new Auditoria()
+                        auditoria.usuario=session?.SPRING_SECURITY_LAST_USERNAME
+                        auditoria.accion="login"
+                        auditoria.role=SCH?.context?.authentication?.authorities?.authority
+                        auditoria.nombreObjeto=params?.controller
+                        auditoria.detalle=params as JSON
+                        if (!auditoria.hasErrors()){
+                            auditoria.save()
+                        }
+                        session.logLogIn="logeado"
+                     }
+                    log.debug("SecurityFilter: adding current user to model = $model")
+                } else {
+                    log.debug("SecurityFilter: anonymous user, model = $model")
+                }
+            }*/
+        }
+    }
+}

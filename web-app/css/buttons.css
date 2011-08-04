@@ -1,0 +1,85 @@
+/*-----------------[	YELLOW (inspired by adobe.com)	]------------------------*/
+button.signup {
+	background: #7fbf4d;
+	background: -moz-linear-gradient(top, #ffcb00 0%, #ff9c00 100%);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffcb00), to(#ff9c00));
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcb00', endColorstr='#ff9c00');
+	border: 1px solid #ffaf34;
+	border-bottom: 1px solid #ffaf34;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: inset 0 1px 0 0 #ffe066;
+	-webkit-box-shadow: inset 0 1px 0 0 #ffe066;
+	box-shadow: inset 0 1px 0 0 #ffe066;
+	padding: 12px 10px;
+	text-align: center;
+	font-family: "helvetica neue", helvetica, arial, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1;
+	color: #FFF;
+}
+button.signup:hover {
+	background: #76b347;
+	background: -moz-linear-gradient(top, #ffcb00 0%, #ff9c00 100%);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffcb00), to(#ff9c00));
+ 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcb00', endColorstr='#ff9c00');
+	-moz-box-shadow: inset 0 1px 0 0 #ffe066;
+	-webkit-box-shadow: inset 0 1px 0 0 #ffe066;
+	box-shadow: inset 0 1px 0 0 #ffe066;
+	cursor: pointer;
+}
+button.signup:active {
+	border: 1px solid #ff8918;
+	border-bottom: 1px solid #ff8918;
+	-moz-box-shadow: inset 0 0 8px 4px #ff8918, 0 1px 0 0 #eee;
+	-webkit-box-shadow: inset 0 0 8px 4px #ff8918, 0 1px 0 0 #eee;
+	box-shadow: inset 0 0 8px 4px #ff8918, 0 1px 0 0 #eee;
+	color:#fff;
+}
+button.signup li {
+	color:#ff8918;
+}
+
+/*-----------------[	GREEN	]------------------------*/
+
+button.donate {
+	background: #7fbf4d;
+	background: -moz-linear-gradient(top, #7fbf4d 0%, #63a62f 100%);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#7fbf4d), to(#63a62f));
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7fbf4d', endColorstr='#63a62f');
+	border: 1px solid #63a62f;
+	border-bottom: 1px solid #5b992b;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: inset 0 1px 0 0 #96ca6d;
+	-webkit-box-shadow: inset 0 1px 0 0 #96ca6d;
+	box-shadow: inset 0 1px 0 0 #96ca6d;
+	color: #fff;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1;
+	padding: 12px 0;
+	text-align: center;
+	text-shadow: 0 -1px 0 #4C9021;
+	padding: 12px 10px;
+}
+button.donate:hover {
+	background: #76b347;
+	background: -moz-linear-gradient(top, #76b347 0%, #5e9e2e 100%);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#76b347), to(#5e9e2e));
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#76b347', endColorstr='#5e9e2e');
+	-moz-box-shadow: inset 0 1px 0 0 #8dbf67;
+	-webkit-box-shadow: inset 0 1px 0 0 #8dbf67;
+	box-shadow: inset 0 1px 0 0 #8dbf67;
+	cursor: pointer;
+}
+button.donate:active {
+	border: 1px solid #5b992b;
+	border-bottom: 1px solid #538c27;
+	-moz-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eee;
+	-webkit-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eee;
+	box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eee;
+}

@@ -1,0 +1,42 @@
+dataSource {
+}
+hibernate {
+    cache.use_second_level_cache=true
+    cache.use_query_cache=true
+    //dialect = 'org.hibernate.dialect.Oracle10gDialect';
+    cache.provider_class='org.hibernate.cache.EhCacheProvider'
+}
+// environment specific settings
+environments {
+	development {
+		dataSource {
+                    pooled = true
+                    driverClassName = "oracle.jdbc.OracleDriver"
+                    username = "USER"
+                    password = "PASSWORD"
+                    dbCreate = "update"// one of 'create', 'create-drop','update'
+   		    url = "jdbc:oracle:thin:@HOST:PORT:DB"
+		}
+	}
+	test {
+		dataSource {
+                    pooled = true
+                    driverClassName = "oracle.jdbc.OracleDriver"
+                    username = "USER"
+                    password = "PASSWORD"
+		    dbCreate = "update"// one of 'create', 'create-drop','update'
+   		    url = "jdbc:oracle:thin:@HOST:PORT:DB"
+		}
+	}
+	production {
+		dataSource {
+                    pooled = true
+                    driverClassName = "oracle.jdbc.OracleDriver"
+                    username = "USER"
+                    password = "PASSWORD"
+		    dbCreate = "update"// one of 'create', 'create-drop','update'
+   		    url = "jdbc:oracle:thin:@HOST:PORT:DB"
+		}
+	}
+}
+

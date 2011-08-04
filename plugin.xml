@@ -1,0 +1,48 @@
+<plugin name='goliath' version='0.5' grailsVersion='1.3.4 &gt; *'>
+  <author>Carlos Matias Baglieri</author>
+  <authorEmail>matiasbaglieri@gmail.com</authorEmail>
+  <title>Plugin Goliath Custom Crud With Search filters,authentication, menu, quartz....</title>
+  <description>\
+    This plugin has a custom crud , menu quartz and Spring Security Core base configuration. export configured and others thinks.
+</description>
+  <documentation>http://grails.org/plugin/goliath</documentation>
+  <resources>
+    <resource>BuildConfig</resource>
+    <resource>Config</resource>
+    <resource>DataSource</resource>
+    <resource>UrlMappings</resource>
+    <resource>LoginController</resource>
+    <resource>LogoutController</resource>
+    <resource>ar.com.goliath.AuditoriaBatchController</resource>
+    <resource>ar.com.goliath.AuditoriaController</resource>
+    <resource>ar.com.goliath.InicioController</resource>
+    <resource>ar.com.goliath.RequestmapController</resource>
+    <resource>ar.com.goliath.RoleController</resource>
+    <resource>ar.com.goliath.UserController</resource>
+    <resource>ar.com.goliath.Auditoria</resource>
+    <resource>ar.com.goliath.AuditoriaBatch</resource>
+    <resource>ar.com.goliath.Requestmap</resource>
+    <resource>ar.com.goliath.Role</resource>
+    <resource>ar.com.goliath.User</resource>
+    <resource>ar.com.goliath.UserRole</resource>
+    <resource>ar.com.goliath.AuditoriaBatchService</resource>
+    <resource>ar.com.goliath.AuditoriaService</resource>
+    <resource>ar.com.goliath.RequestmapService</resource>
+    <resource>ar.com.goliath.RoleService</resource>
+    <resource>ar.com.goliath.UserService</resource>
+    <resource>ComboProductoTagLib</resource>
+    <resource>DateFormatTagLib</resource>
+    <resource>DateTagLib</resource>
+    <resource>LoginTagLib</resource>
+  </resources>
+  <dependencies>
+    <plugin name='calendar' version='1.2.0 &gt; *' />
+    <plugin name='quartz' version='0.4.1 &gt; *' />
+    <plugin name='bubbling' version='2.1.2 &gt; *' />
+    <plugin name='hibernate' version='1.1.2 &gt; *' />
+    <plugin name='tomcat' version='1.1 &gt; *' />
+    <plugin name='yui' version='2.7.0.1 &gt; *' />
+    <plugin name='springSecurityCore' version='1.0.1 &gt; *' />
+  </dependencies>
+  <behavior />
+</plugin>

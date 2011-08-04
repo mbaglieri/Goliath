@@ -1,0 +1,30 @@
+import ar.com.goliath.*
+class BootStrap {
+	
+	def springSecurityService
+    def init = { servletContext ->
+        def userRole=Role.findByAuthority("ROLE_USER")?:new Role(authority:"ROLE_USER").save()
+        def adminRole=Role.findByAuthority("ROLE_ADMIN")?:new Role(authority:"ROLE_ADMIN").save()
+        def supervisorRole=Role.findByAuthority('ROLE_SUPERVISOR')?:new Role(authority:"ROLE_ADMIN").save()
+ 
+        def request1=Requestmap.findByUrl('/js/**')?:new Requestmap(url:'/js/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+        def request3=Requestmap.findByUrl('/css/**')?:new Requestmap(url:'/css/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+        def request4=Requestmap.findByUrl('/images/**')?:   new Requestmap(url:'/images/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+        def request5=Requestmap.findByUrl('/login/**')?: new Requestmap(url:'/login/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+        def request6=Requestmap.findByUrl('/logout/**')?: new Requestmap(url:'/logout/**', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+        def request2=Requestmap.findByUrl('/*')?: new Requestmap(url:'/*', configAttribute: 'IS_AUTHENTICATED_ANONYMOUSLY').save()
+        def request7=Requestmap.findByUrl('/profile/**')?: new Requestmap(url:'/profile/**', configAttribute: 'ROLE_USER').save()
+        def request8=Requestmap.findByUrl('/admin/**')?: new Requestmap(url:'/admin/**', configAttribute: 'ROLE_ADMIN').save()
+        def request9=Requestmap.findByUrl('/admin/user/**')?:new Requestmap(url:'/admin/user/**', configAttribute: 'ROLE_SUPERVISOR').save()
+		def adminUser = User.findByUsername('admin') ?: new User(
+			      username: 'admin',
+				                password: springSecurityService.encodePassword('admin'),
+				                enabled: true).save(failOnError: true)
+			
+				        if (!adminUser.authorities.contains(adminRole)) {
+				            UserRole.create adminUser, adminRole
+				        }
+    }
+    def destroy = {
+    }
+}

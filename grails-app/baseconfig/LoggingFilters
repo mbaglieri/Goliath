@@ -1,0 +1,31 @@
+
+import ar.com.goliath.Auditoria
+class LoggingFilters {
+    static filters = {
+        all(controller:"*", action:"(save|activate|delete|update)") {
+            /** after = { model ->
+                def auditoria= new Auditoria()
+                auditoria.usuario=session?.SPRING_SECURITY_LAST_USERNAME
+                if(params?._action_delete){
+                    auditoria.accion="desactivar"
+                }else if (params?._action_Update){
+                    auditoria.accion="modificar"
+                }else  if ( params?.action =="save"){
+                    auditoria.accion="crear"
+                }else if (params?.action == "activate"){
+                    auditoria.accion="activar"
+                }else{
+                    auditoria.accion=params?.action
+                }
+                auditoria.role=SCH?.context?.authentication?.authorities?.authority
+                auditoria.nombreObjeto=params?.controller
+                auditoria.detalle=params as JSON
+                if (!auditoria.hasErrors()){
+                    auditoria.save()
+
+                }
+            }*/
+        }
+    }
+}
+
